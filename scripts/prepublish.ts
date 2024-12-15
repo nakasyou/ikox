@@ -33,8 +33,8 @@ const packageJson = {
         '/',
       )
       const value = {
-        default: './' + relativePath,
-        types: './' + relativePath.replace(/\.js$/, '.d.ts'),
+        default: './dist/' + relativePath,
+        types: './dist/' + relativePath.replace(/\.js$/, '.d.ts'),
       }
       if (relativePath === 'mod.js') {
         return ['.', value]
