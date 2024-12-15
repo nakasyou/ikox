@@ -1,6 +1,6 @@
 # ikox
 [![JSR](https://jsr.io/badges/@ns/ikox)](https://jsr.io/@ns/ikox)
-[![npm](https://img.shields.io/npm/v/ikox)](https://npmjs.com/packages/ikox)
+[![npm](https://img.shields.io/npm/v/ikox)](https://npmjs.com/package/ikox)
 
 Ikox is a library for converting data format directly.
 
