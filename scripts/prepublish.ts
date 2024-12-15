@@ -10,6 +10,7 @@ const compilerOptions: ts.CompilerOptions = {
   emitDeclarationOnly: false,
   module: ts.ModuleKind.ESNext,
   target: ts.ScriptTarget.ESNext,
+  moduleResolution: 'node',
 }
 const targetPaths = (await Array.fromAsync(fs.expandGlob('./src/**/*.ts', {
   exclude: ['**/*.test.ts'],
