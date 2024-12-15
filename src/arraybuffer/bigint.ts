@@ -9,7 +9,7 @@
  * @param bigEndian If it's true or undefined, the input will be processed as a big endian. If it's false, the input will be processed as a little endian.
  * @returns BigInt
  */
-const arraybuffer_bigInt = (input: ArrayBuffer, bigEndian = true): bigint => {
+const arrayBuffer_bigInt = (input: ArrayBuffer, bigEndian = true): bigint => {
   const view = new DataView(input)
   let bigInt = 0n
 
@@ -21,4 +21,4 @@ const arraybuffer_bigInt = (input: ArrayBuffer, bigEndian = true): bigint => {
   return bigInt
 }
 
-export default arraybuffer_bigInt
+export default arrayBuffer_bigInt
