@@ -1,0 +1,52 @@
+{
+  "name": "@ns/ikox",
+  "version": "0.1.0",
+  "tasks": {
+    "dev": "deno test --watch --no-check",
+    "prepublish": "deno -RWE scripts/prepublish.ts"
+  },
+  "fmt": {
+    "semiColons": false,
+    "singleQuote": true
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.9",
+    "@std/fs": "jsr:@std/fs@^1.0.6",
+    "@std/path": "jsr:@std/path@^1.0.8",
+    "typescript": "npm:typescript@^5.7.2"
+  },
+  "publish": {
+    "include": [
+      "LICENSE",
+      "README.md",
+      "src"
+    ],
+    "exclude": [
+      "src/**/*.test.ts"
+    ]
+  },
+  "exports": {
+    ".": "./src/mod.ts",
+    "./arraybuffer-bigint": "./src/arraybuffer/bigint.ts",
+    "./arraybuffer-blob": "./src/arraybuffer/blob.ts",
+    "./arraybuffer-hex": "./src/arraybuffer/hex.ts",
+    "./arraybuffer-uint8array": "./src/arraybuffer/uint8array.ts",
+    "./bigint-arraybuffer": "./src/bigint/arraybuffer.ts",
+    "./bigint-blob": "./src/bigint/blob.ts",
+    "./bigint-hex": "./src/bigint/hex.ts",
+    "./bigint-uint8array": "./src/bigint/uint8array.ts",
+    "./blob-arraybuffer": "./src/blob/arraybuffer.ts",
+    "./blob-bigint": "./src/blob/bigint.ts",
+    "./blob-hex": "./src/blob/hex.ts",
+    "./blob-uint8array": "./src/blob/uint8array.ts",
+    "./hex-arraybuffer": "./src/hex/arraybuffer.ts",
+    "./hex-bigint": "./src/hex/bigint.ts",
+    "./hex-blob": "./src/hex/blob.ts",
+    "./hex-uint8array": "./src/hex/uint8array.ts",
+    "./uint8array-arraybuffer": "./src/uint8array/arraybuffer.ts",
+    "./uint8array-bigint": "./src/uint8array/bigint.ts",
+    "./uint8array-blob": "./src/uint8array/blob.ts",
+    "./uint8array-hex": "./src/uint8array/hex.ts"
+  },
+  "nodeModulesDir": "none"
+}
