@@ -13,7 +13,8 @@ const base64_bigInt = (base64: string, bigEndian = true): bigint => {
   const ascii = atob(base64)
   const len = ascii.length
   for (let i = 0; i < len; i++) {
-    bigint = (bigint << 8n) | BigInt(ascii.charCodeAt(bigEndian ? i : len - i - 1))
+    bigint = (bigint << 8n) |
+      BigInt(ascii.charCodeAt(bigEndian ? i : len - i - 1))
   }
   return bigint
 }

@@ -10,6 +10,7 @@ import uint8Array_hex from '../uint8array/hex.ts'
  * @param input ArrayBuffer
  * @returns Hex string
  */
-const arrayBuffer_hex = (input: ArrayBuffer): string => uint8Array_hex(new Uint8Array(input))
+const arrayBuffer_hex = (input: ArrayBuffer): string =>
+  uint8Array_hex(new Uint8Array(input))
 
 export default arrayBuffer_hex

@@ -8,6 +8,7 @@
  * @param blob Input Blob.
  * @returns Promise returning ArrayBuffer.
  */
-const blob_arrayBuffer = (blob: Blob): Promise<ArrayBuffer> => blob.arrayBuffer()
+const blob_arrayBuffer = (blob: Blob): Promise<ArrayBuffer> =>
+  blob.arrayBuffer()
 
 export default blob_arrayBuffer

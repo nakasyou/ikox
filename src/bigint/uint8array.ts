@@ -13,7 +13,7 @@ const bigInt_uint8Array = (bigint: bigint, bigEndian = true): Uint8Array => {
   if (bigint < 0n) {
     throw new RangeError('input must be positive number.')
   }
-  const arr = new Uint8Array((function * () {
+  const arr = new Uint8Array((function* () {
     while (bigint !== 0n) {
       yield Number(bigint & 0xffn)
       bigint >>= 8n

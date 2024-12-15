@@ -10,6 +10,7 @@ import arrayBuffer_base64 from '../arraybuffer/base64.ts'
  * @param blob Blob
  * @returns Base64
  */
-const blob_base64 = (blob: Blob): Promise<string> => blob.arrayBuffer().then(arrayBuffer_base64)
+const blob_base64 = (blob: Blob): Promise<string> =>
+  blob.arrayBuffer().then(arrayBuffer_base64)
 
 export default blob_base64

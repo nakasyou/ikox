@@ -14,7 +14,8 @@ const arraybuffer_bigInt = (input: ArrayBuffer, bigEndian = true): bigint => {
   let bigInt = 0n
 
   for (let i = 0, len = input.byteLength; i < len; i++) {
-    bigInt = (bigInt << 8n) | BigInt(view.getUint8(bigEndian ? i : (len - i - 1)))
+    bigInt = (bigInt << 8n) |
+      BigInt(view.getUint8(bigEndian ? i : (len - i - 1)))
   }
 
   return bigInt
