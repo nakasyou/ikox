@@ -23,4 +23,11 @@ jobs:
       - name: Check Types
         run: deno check **/*
       - name: Test
-        run: deno test
+        run: deno test --coverage=coverage
+      - name: Make coverage file
+        run: deno coverage ./coverage --lcov > coverage.lcov
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.lcov
