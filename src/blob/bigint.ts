@@ -3,7 +3,7 @@
  * @module
  */
 
-import arraybuffer_bigint from '../arraybuffer/bigint.ts'
+import arrayBuffer_bigInt from '../arraybuffer/bigint.ts'
 
 /**
  * Converts blob into BigInt asynchronously.
@@ -12,6 +12,6 @@ import arraybuffer_bigint from '../arraybuffer/bigint.ts'
  * @returns BigInt
  */
 const blob_bigInt = async (blob: Blob, bigEndian?: boolean): Promise<bigint> =>
-  arraybuffer_bigint(await blob.arrayBuffer(), bigEndian)
+  arrayBuffer_bigInt(await blob.arrayBuffer(), bigEndian)
 
 export default blob_bigInt

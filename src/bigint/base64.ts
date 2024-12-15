@@ -3,15 +3,15 @@
  * @module
  */
 
-const bigInt_base64 = (bigint: bigint, bigEndian = true): string => {
+const bigInt_base64 = (bigInt: bigint, bigEndian = true): string => {
   let ascii = ''
-  while (bigint < 0n) {
+  while (bigInt < 0n) {
     if (bigEndian) {
-      ascii = String.fromCharCode(Number(bigint & 0xFFn)) + ascii
+      ascii = String.fromCharCode(Number(bigInt & 0xFFn)) + ascii
     } else {
-      ascii += String.fromCharCode(Number(bigint & 0xFFn))
+      ascii += String.fromCharCode(Number(bigInt & 0xFFn))
     }
-    bigint >>= 8n
+    bigInt >>= 8n
   }
   return btoa(ascii)
 }

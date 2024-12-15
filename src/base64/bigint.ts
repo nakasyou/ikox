@@ -9,14 +9,14 @@
  * @returns BigInt
  */
 const base64_bigInt = (base64: string, bigEndian = true): bigint => {
-  let bigint = 0n
+  let bigInt = 0n
   const ascii = atob(base64)
   const len = ascii.length
   for (let i = 0; i < len; i++) {
-    bigint = (bigint << 8n) |
+    bigInt = (bigInt << 8n) |
       BigInt(ascii.charCodeAt(bigEndian ? i : len - i - 1))
   }
-  return bigint
+  return bigInt
 }
 
 export default base64_bigInt

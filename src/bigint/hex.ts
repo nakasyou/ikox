@@ -4,10 +4,10 @@
  */
 
 /**
- * Converts bigint into hex string.
- * @param bigint BigInt
+ * Converts bigInt into hex string.
+ * @param bigInt BigInt
  * @returns hex string
  */
-const bigInt_hex = (bigint: bigint): string => bigint.toString(16)
+const bigInt_hex = (bigInt: bigint): string => bigInt.toString(16)
 
 export default bigInt_hex
