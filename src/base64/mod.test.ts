@@ -1,5 +1,5 @@
 import { assertEquals } from '@std/assert'
-import base64_bigInt from './bigint.ts'
+import { base64_bigInt } from './mod.ts'
 
 Deno.test('base64_bigInt', () => {
   assertEquals(base64_bigInt('EjQ=', true), 0x1234n)
