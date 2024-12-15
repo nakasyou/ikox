@@ -8,7 +8,7 @@
  * @param arr Uint8Array
  * @returns Base64 string
  */
-const uint8Array_base64 = (arr: Uint8Array) => {
+const uint8Array_base64 = (arr: Uint8Array): string => {
   let ascii = ''
   for (let i = 0; i < arr.byteLength; i++) {
     ascii += String.fromCharCode(arr[i])
