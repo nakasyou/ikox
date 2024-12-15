@@ -22,5 +22,5 @@ jobs:
         run: deno lint
       - name: Check Types
         run: deno check **/*
-      - name: Format Check
-        run: deno task prepublish ${{ github.event.release.tag_name }}
+      - name: Test
+        run: deno test
