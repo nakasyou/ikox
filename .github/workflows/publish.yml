@@ -28,4 +28,4 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish to JSR
-        run: deno publish
+        run: deno publish --allow-dirty
