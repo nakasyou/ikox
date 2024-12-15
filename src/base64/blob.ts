@@ -11,8 +11,9 @@ import base64_uint8Array from './uint8array.ts'
  * @param type Mime Type
  * @returns Blob
  */
-const base64_blob = (base64: string, type?: string): Blob => new Blob([base64_uint8Array(base64)], {
-  type
-})
+const base64_blob = (base64: string, type?: string): Blob =>
+  new Blob([base64_uint8Array(base64)], {
+    type,
+  })
 
 export default base64_blob

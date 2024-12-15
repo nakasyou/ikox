@@ -11,6 +11,7 @@ import hex_uint8Array from './uint8array.ts'
  * @param type mime type
  * @returns Blob
  */
-const hex_blob = (hex: string, type?: string): Blob => new Blob([hex_uint8Array(hex)], { type })
+const hex_blob = (hex: string, type?: string): Blob =>
+  new Blob([hex_uint8Array(hex)], { type })
 
 export default hex_blob

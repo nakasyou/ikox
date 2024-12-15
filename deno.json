@@ -15,6 +15,9 @@
     "@std/path": "jsr:@std/path@^1.0.8",
     "typescript": "npm:typescript@^5.7.2"
   },
+  "exclude": [
+    "dist"
+  ],
   "publish": {
     "include": [
       "LICENSE",

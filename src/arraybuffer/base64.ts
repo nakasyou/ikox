@@ -3,10 +3,10 @@
  * @module
  */
 
-const arrayBuffer_base64 = (buff: ArrayBuffer) => {
+const arrayBuffer_base64 = (buff: ArrayBuffer): string => {
   const arr = new Uint8Array(buff)
   let ascii = ''
-  for (let i = 0; i < arr.byteLength; i ++) {
+  for (let i = 0; i < arr.byteLength; i++) {
     ascii += String.fromCharCode(arr[i])
   }
   return btoa(ascii)
