@@ -21,7 +21,7 @@ program.emit()
 
 await esbuild.build({
   entryPoints: targetPaths,
-  outdir: 'dist'
+  outdir: 'dist',
 })
 
 const packageJson = {
