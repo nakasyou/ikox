@@ -1,10 +1,10 @@
-name: Publish
+name: Check
 on:
   push:
   pull_request:
 
 jobs:
-  publish:
+  ci:
     runs-on: ubuntu-latest
 
     permissions:
