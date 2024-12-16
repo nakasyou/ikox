@@ -1,16 +1,16 @@
 import * as fs from '@std/fs'
 import * as path from '@std/path'
 import * as ts from 'typescript'
+import * as esbuild from 'esbuild'
 
 // npm
 await fs.emptyDir('./dist')
 const compilerOptions: ts.CompilerOptions = {
   outDir: 'dist',
   declaration: true,
-  emitDeclarationOnly: false,
+  emitDeclarationOnly: true,
   module: ts.ModuleKind.ESNext,
   target: ts.ScriptTarget.ESNext,
-  moduleResolution: ts.ModuleResolutionKind.Node,
 }
 const targetPaths = (await Array.fromAsync(fs.expandGlob('./src/**/*.ts', {
   exclude: ['**/*.test.ts'],
@@ -18,6 +18,11 @@ const targetPaths = (await Array.fromAsync(fs.expandGlob('./src/**/*.ts', {
 
 const program = ts.createProgram(targetPaths, compilerOptions)
 program.emit()
+
+await esbuild.build({
+  entryPoints: targetPaths,
+  outdir: 'dist'
+})
 
 const packageJson = {
   name: 'ikox',
@@ -34,8 +39,8 @@ const packageJson = {
         '/',
       )
       const value = {
-        default: './dist/' + relativePath,
         types: './dist/' + relativePath.replace(/\.js$/, '.d.ts'),
+        default: './dist/' + relativePath,
       }
       if (relativePath === 'mod.js') {
         return ['.', value]
